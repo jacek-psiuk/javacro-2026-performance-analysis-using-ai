@@ -1,0 +1,21 @@
+$ jcmd 29472 VM.version
+29472:
+OpenJDK 64-Bit Server VM version 25.0.2+10-LTS
+JDK 25.0.2
+
+$ jcmd 29472 VM.uptime
+29472:
+4.615 s
+
+$ jcmd 29472 VM.flags
+29472:
+-XX:-AOTInvokeDynamicLinking -XX:-AOTRecordTraining -XX:-AOTReplayTraining -XX:CICompilerCount=12 -XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=13 -XX:G1EagerReclaimRemSetThreshold=32 -XX:G1HeapRegionSize=4194304 -XX:G1RemSetArrayOfCardsEntries=32 -XX:G1RemSetHowlMaxNumBuckets=8 -XX:G1RemSetHowlNumBuckets=8 -XX:InitialHeapSize=532676608 -XX:-IntelJccErratumMitigation -XX:MarkStackSize=4194304 -XX:MarkStackSizeMax=536870912 -XX:MaxHeapSize=8514437120 -XX:MaxNewSize=5108662272 -XX:MinHeapDeltaBytes=4194304 -XX:MinHeapSize=8388608 -XX:NonNMethodCodeHeapSize=7602176 -XX:NonProfiledCodeHeapSize=122093568 -XX:ProfiledCodeHeapSize=121962496 -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:SoftMaxHeapSize=8514437120 -XX:+UseCompressedOops -XX:+UseG1GC -XX:-UseLargePagesIndividualAllocation -XX:X86ICacheSync=3 
+
+$ jcmd 29472 VM.command_line
+29472:
+VM Arguments:
+java_command: hr.javacro.section1.Ex2
+java_class_path (initial): C:\Users\JACEK~1.PSI\AppData\Local\Temp\perf-eval-build-eumwg3po\classes
+Launcher Type: SUN_STANDARD
+
+CPU count: 16

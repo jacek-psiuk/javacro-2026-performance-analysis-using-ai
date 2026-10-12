@@ -1,0 +1,73 @@
+{
+  "description": "Deadlock from inconsistent lock ordering (section1 Ex1). Three thread dumps.",
+  "sources": [
+    {
+      "from": "src/main/java/hr/javacro/section1/Ex1.java",
+      "replace": [
+        [
+          "The app now hangs, so take a thread dump with: jstack ",
+          "PID "
+        ]
+      ]
+    }
+  ],
+  "main": "hr.javacro.section1.Ex1",
+  "record": {
+    "steps": [
+      [
+        "sleep",
+        2
+      ],
+      [
+        "context"
+      ],
+      [
+        "jstack",
+        1
+      ],
+      [
+        "sleep",
+        3
+      ],
+      [
+        "jstack",
+        2
+      ],
+      [
+        "sleep",
+        3
+      ],
+      [
+        "jstack",
+        3
+      ]
+    ]
+  },
+  "prompt": "Our Java money-transfer job hangs: it starts, prints that its threads have started, and never finishes. Find out why.",
+  "expected": {
+    "verdicts": [
+      "REQUIRED"
+    ],
+    "forbidden_titles": "leak|contention",
+    "issues": [
+      {
+        "id": "deadlock",
+        "match": "deadlock|lock order",
+        "severities": [
+          "Critical"
+        ],
+        "lines": {
+          "Ex1.java": [
+            30,
+            31,
+            33,
+            34,
+            46,
+            47
+          ]
+        },
+        "rank": 1
+      }
+    ]
+  }
+}

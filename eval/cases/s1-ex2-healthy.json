@@ -1,0 +1,60 @@
+{
+  "description": "Healthy twin of s1-ex2 (Ex2Fixed renamed to Ex2): remote calls run in parallel, no lock.",
+  "sources": [
+    {
+      "from": "src/main/java/hr/javacro/section1/Ex2Fixed.java",
+      "to": "src/main/java/hr/javacro/section1/Ex2.java",
+      "replace": [
+        [
+          "Ex2Fixed",
+          "Ex2"
+        ],
+        [
+          "Compare with Ex2 by taking a thread dump with: jstack -l ",
+          "PID "
+        ]
+      ]
+    }
+  ],
+  "main": "hr.javacro.section1.Ex2",
+  "record": {
+    "steps": [
+      [
+        "sleep",
+        4
+      ],
+      [
+        "context"
+      ],
+      [
+        "jstack",
+        1
+      ],
+      [
+        "sleep",
+        4
+      ],
+      [
+        "jstack",
+        2
+      ],
+      [
+        "sleep",
+        4
+      ],
+      [
+        "jstack",
+        3
+      ]
+    ]
+  },
+  "prompt": "Our price lookup service runs 8 worker threads, but its throughput looks low to us (see the console output). Find out what limits it.",
+  "expected": {
+    "verdicts": [
+      "NONE",
+      "RECOMMENDED"
+    ],
+    "forbidden_titles": "contention|deadlock|leak|blocked|starv",
+    "issues": []
+  }
+}

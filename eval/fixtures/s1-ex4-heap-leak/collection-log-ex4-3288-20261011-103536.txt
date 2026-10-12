@@ -1,0 +1,7 @@
++   3.2s  jcmd.EXE 3288 VM.version
++   3.4s  jcmd.EXE 3288 VM.uptime
++   3.6s  jcmd.EXE 3288 VM.flags
++   3.8s  jcmd.EXE 3288 VM.command_line
++   4.1s  jcmd.EXE 3288 GC.class_histogram > histo-ex4-3288-20261011-103536-1.txt
++  12.4s  jcmd.EXE 3288 GC.class_histogram > histo-ex4-3288-20261011-103536-2.txt
++  12.6s  jcmd.EXE 3288 GC.heap_dump heap-ex4-3288-20261011-103536.hprof

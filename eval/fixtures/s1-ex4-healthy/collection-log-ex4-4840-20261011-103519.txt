@@ -1,0 +1,7 @@
++   3.2s  jcmd.EXE 4840 VM.version
++   3.4s  jcmd.EXE 4840 VM.uptime
++   3.6s  jcmd.EXE 4840 VM.flags
++   3.8s  jcmd.EXE 4840 VM.command_line
++   4.0s  jcmd.EXE 4840 GC.class_histogram > histo-ex4-4840-20261011-103519-1.txt
++  12.2s  jcmd.EXE 4840 GC.class_histogram > histo-ex4-4840-20261011-103519-2.txt
++  12.4s  jcmd.EXE 4840 GC.heap_dump heap-ex4-4840-20261011-103519.hprof

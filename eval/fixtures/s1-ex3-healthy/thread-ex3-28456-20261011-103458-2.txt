@@ -1,0 +1,420 @@
+2026-10-11 10:35:16
+Full thread dump OpenJDK 64-Bit Server VM (25.0.2+10-LTS mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x00000243fc38e820, length=31, elements={
+0x00000243d70755f0, 0x00000243f9450440, 0x00000243f9451cd0, 0x00000243f9455240,
+0x00000243f9456e10, 0x00000243f945b860, 0x00000243f9464b50, 0x00000243f946e680,
+0x00000243f9473140, 0x00000243fc2fcd40, 0x00000243fc305f90, 0x00000243fc3185f0,
+0x00000243fc31ae20, 0x00000243fc31d7c0, 0x00000243fc31fc10, 0x00000243fc338230,
+0x00000243fc339200, 0x00000243fc339dd0, 0x00000243fc33a590, 0x00000243fc33e450,
+0x00000243fc33bd40, 0x00000243fc33c510, 0x00000243fc33ada0, 0x00000243fc33d4b0,
+0x00000243fc33b570, 0x00000243fc340390, 0x00000243fc3422d0, 0x00000243fc340b60,
+0x00000243fc33fbc0, 0x00000243fc36ac00, 0x00000243fc369c60
+}
+_to_delete_list=0x00000243fcbb81b0, length=32, elements={
+0x00000243d70755f0, 0x00000243f9450440, 0x00000243f9451cd0, 0x00000243f9455240,
+0x00000243f9456e10, 0x00000243f945b860, 0x00000243f9464b50, 0x00000243f946e680,
+0x00000243f9473140, 0x00000243fc2fcd40, 0x00000243fc305f90, 0x00000243fc3185f0,
+0x00000243fc31ae20, 0x00000243fc31d7c0, 0x00000243fc31fc10, 0x00000243fc338230,
+0x00000243fc339200, 0x00000243fc339dd0, 0x00000243fc33a590, 0x00000243fc33e450,
+0x00000243fc33bd40, 0x00000243fc33c510, 0x00000243fc33ada0, 0x00000243fc33d4b0,
+0x00000243fc33b570, 0x00000243fc340390, 0x00000243fc3422d0, 0x00000243fc340b60,
+0x00000243fc33fbc0, 0x00000243fc36ac00, 0x00000243fc369c60, 0x00000243fc2f3460
+}
+
+"main" #3 [30788] prio=5 os_prio=0 cpu=218.75ms elapsed=17.82s tid=0x00000243d70755f0 nid=30788 waiting on condition  [0x000000e4b31ff000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleepNanos0(java.base@25.0.2/Native Method)
+	at java.lang.Thread.sleepNanos(java.base@25.0.2/Thread.java:509)
+	at java.lang.Thread.sleep(java.base@25.0.2/Thread.java:540)
+	at hr.javacro.section1.Ex3.sleep(Ex3.java:72)
+	at hr.javacro.section1.Ex3.main(Ex3.java:49)
+
+   Locked ownable synchronizers:
+	- None
+
+"Reference Handler" #15 [41160] daemon prio=10 os_prio=2 cpu=0.00ms elapsed=17.73s tid=0x00000243f9450440 nid=41160 waiting on condition  [0x000000e4b39ff000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@25.0.2/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@25.0.2/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@25.0.2/Reference.java:208)
+
+   Locked ownable synchronizers:
+	- None
+
+"Finalizer" #16 [45260] daemon prio=8 os_prio=1 cpu=0.00ms elapsed=17.73s tid=0x00000243f9451cd0 nid=45260 in Object.wait()  [0x000000e4b3afe000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@25.0.2/Native Method)
+	- waiting on <0x00000006240022e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@25.0.2/Object.java:389)
+	at java.lang.Object.wait(java.base@25.0.2/Object.java:351)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@25.0.2/ReferenceQueue.java:137)
+	at java.lang.ref.ReferenceQueue.remove(java.base@25.0.2/ReferenceQueue.java:215)
+	- locked <0x00000006240022e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@25.0.2/Finalizer.java:165)
+
+   Locked ownable synchronizers:
+	- None
+
+"Signal Dispatcher" #17 [55148] daemon prio=9 os_prio=2 cpu=0.00ms elapsed=17.73s tid=0x00000243f9455240 nid=55148 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Attach Listener" #18 [28744] daemon prio=5 os_prio=2 cpu=125.00ms elapsed=17.73s tid=0x00000243f9456e10 nid=28744 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Service Thread" #19 [30568] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=17.73s tid=0x00000243f945b860 nid=30568 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Monitor Deflation Thread" #20 [43724] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=17.73s tid=0x00000243f9464b50 nid=43724 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread0" #21 [2092] daemon prio=9 os_prio=2 cpu=46.88ms elapsed=17.73s tid=0x00000243f946e680 nid=2092 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+   Locked ownable synchronizers:
+	- None
+
+"C1 CompilerThread0" #29 [50480] daemon prio=9 os_prio=2 cpu=78.12ms elapsed=17.73s tid=0x00000243f9473140 nid=50480 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+   Locked ownable synchronizers:
+	- None
+
+"Notification Thread" #33 [6236] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=17.72s tid=0x00000243fc2fcd40 nid=6236 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Common-Cleaner" #34 [63280] daemon prio=8 os_prio=1 cpu=0.00ms elapsed=17.71s tid=0x00000243fc305f90 nid=63280 in Object.wait()  [0x000000e4b42ff000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@25.0.2/Native Method)
+	- waiting on <0x0000000624017ff0> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@25.0.2/Object.java:389)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@25.0.2/ReferenceQueue.java:123)
+	at java.lang.ref.ReferenceQueue.remove(java.base@25.0.2/ReferenceQueue.java:201)
+	- locked <0x0000000624017ff0> (a java.lang.ref.ReferenceQueue$Lock)
+	at jdk.internal.ref.CleanerImpl.run(java.base@25.0.2/CleanerImpl.java:146)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+	at jdk.internal.misc.InnocuousThread.run(java.base@25.0.2/InnocuousThread.java:148)
+
+   Locked ownable synchronizers:
+	- None
+
+"VirtualThread-unblocker" #35 [60968] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=17.68s tid=0x00000243fc3185f0 nid=60968 runnable  [0x000000e4b43ff000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.VirtualThread.takeVirtualThreadListToUnblock(java.base@25.0.2/Native Method)
+	at java.lang.VirtualThread.unblockVirtualThreads(java.base@25.0.2/VirtualThread.java:1507)
+	at java.lang.VirtualThread$$Lambda/0x0000000013002df0.run(java.base@25.0.2/Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+	at jdk.internal.misc.InnocuousThread.run(java.base@25.0.2/InnocuousThread.java:148)
+
+   Locked ownable synchronizers:
+	- None
+
+"ForkJoinPool-1-worker-1" #37 [62380] daemon prio=5 os_prio=0 cpu=31.25ms elapsed=17.68s tid=0x00000243fc31ae20 nid=62380 waiting on condition  [0x000000e4b44fe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@25.0.2/Native Method)
+	- parking to wait for  <0x00000006240596d8> (a java.util.concurrent.ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@25.0.2/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@25.0.2/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@25.0.2/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@25.0.2/ForkJoinWorkerThread.java:187)
+
+   Locked ownable synchronizers:
+	- None
+
+"ForkJoinPool-1-worker-2" #38 [26644] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=17.68s tid=0x00000243fc31d7c0 nid=26644 waiting on condition  [0x000000e4b45ff000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@25.0.2/Native Method)
+	- parking to wait for  <0x00000006240596d8> (a java.util.concurrent.ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@25.0.2/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@25.0.2/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@25.0.2/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@25.0.2/ForkJoinWorkerThread.java:187)
+
+   Locked ownable synchronizers:
+	- None
+
+"ForkJoinPool-1-delayScheduler" #39 [24492] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=17.67s tid=0x00000243fc31fc10 nid=24492 waiting on condition  [0x000000e4b46ff000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@25.0.2/Native Method)
+	at java.util.concurrent.DelayScheduler.loop(java.base@25.0.2/DelayScheduler.java:253)
+	at java.util.concurrent.DelayScheduler.run(java.base@25.0.2/DelayScheduler.java:221)
+
+   Locked ownable synchronizers:
+	- None
+
+"report-1" #40 [8556] daemon prio=5 os_prio=0 cpu=12984.38ms elapsed=15.67s tid=0x00000243fc338230 nid=8556 runnable  [0x000000e4b47fe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x000000062408b350> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-2" #41 [3740] daemon prio=5 os_prio=0 cpu=13296.88ms elapsed=15.67s tid=0x00000243fc339200 nid=3740 runnable  [0x000000e4b48fe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240be328> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-3" #42 [61112] daemon prio=5 os_prio=0 cpu=13140.62ms elapsed=15.67s tid=0x00000243fc339dd0 nid=61112 runnable  [0x000000e4b49fe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240be4c8> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-4" #43 [58664] daemon prio=5 os_prio=0 cpu=13203.12ms elapsed=15.67s tid=0x00000243fc33a590 nid=58664 runnable  [0x000000e4b4afe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240be668> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-5" #44 [21524] daemon prio=5 os_prio=0 cpu=13125.00ms elapsed=15.67s tid=0x00000243fc33e450 nid=21524 runnable  [0x000000e4b4bfe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240be808> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-6" #45 [31452] daemon prio=5 os_prio=0 cpu=13359.38ms elapsed=15.67s tid=0x00000243fc33bd40 nid=31452 runnable  [0x000000e4b4cfe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240be9a8> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-7" #46 [8268] daemon prio=5 os_prio=0 cpu=13218.75ms elapsed=15.67s tid=0x00000243fc33c510 nid=8268 runnable  [0x000000e4b4dfe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240beb48> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-8" #47 [15720] daemon prio=5 os_prio=0 cpu=13640.62ms elapsed=15.67s tid=0x00000243fc33ada0 nid=15720 runnable  [0x000000e4b4efe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240bece8> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-9" #48 [44568] daemon prio=5 os_prio=0 cpu=13375.00ms elapsed=15.67s tid=0x00000243fc33d4b0 nid=44568 runnable  [0x000000e4b4ffe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240bee88> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-10" #49 [58296] daemon prio=5 os_prio=0 cpu=13250.00ms elapsed=15.67s tid=0x00000243fc33b570 nid=58296 runnable  [0x000000e4b50fe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240bf028> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-11" #50 [5256] daemon prio=5 os_prio=0 cpu=13171.88ms elapsed=15.67s tid=0x00000243fc340390 nid=5256 runnable  [0x000000e4b51fe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240bf1d0> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-12" #51 [61204] daemon prio=5 os_prio=0 cpu=13656.25ms elapsed=15.68s tid=0x00000243fc3422d0 nid=61204 runnable  [0x000000e4b52fe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240bf378> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-13" #52 [47172] daemon prio=5 os_prio=0 cpu=13328.12ms elapsed=15.68s tid=0x00000243fc340b60 nid=47172 runnable  [0x000000e4b53fe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240bf520> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-14" #53 [26088] daemon prio=5 os_prio=0 cpu=13125.00ms elapsed=15.68s tid=0x00000243fc33fbc0 nid=26088 runnable  [0x000000e4b54fe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240bf758> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-15" #54 [55836] daemon prio=5 os_prio=0 cpu=13234.38ms elapsed=15.68s tid=0x00000243fc36ac00 nid=55836 runnable  [0x000000e4b55fe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240bf900> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"report-16" #55 [18220] daemon prio=5 os_prio=0 cpu=13078.12ms elapsed=15.68s tid=0x00000243fc369c60 nid=18220 runnable  [0x000000e4b56fe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3.crunch(Ex3.java:64)
+	at hr.javacro.section1.Ex3.computeReport(Ex3.java:58)
+	at hr.javacro.section1.Ex3$$Lambda/0x0000000013040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.2/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.2/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.2/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.2/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.2/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.2/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- <0x00000006240bfaa8> (a java.util.concurrent.ThreadPoolExecutor$Worker)
+
+"VM Thread" os_prio=2 cpu=0.00ms elapsed=17.77s tid=0x00000243f943eb50 nid=16560 runnable  
+
+"VM Periodic Task Thread" os_prio=2 cpu=0.00ms elapsed=17.78s tid=0x00000243f942bee0 nid=14196 waiting on condition  
+
+"G1 Service" os_prio=2 cpu=0.00ms elapsed=17.82s tid=0x00000243f92f7410 nid=28124 runnable  
+
+"G1 Refine#0" os_prio=2 cpu=0.00ms elapsed=17.82s tid=0x00000243f92f6a00 nid=51544 runnable  
+
+"G1 Conc#0" os_prio=2 cpu=0.00ms elapsed=17.82s tid=0x00000243f9288920 nid=55592 runnable  
+
+"G1 Main Marker" os_prio=2 cpu=0.00ms elapsed=17.82s tid=0x00000243f9287f80 nid=56008 runnable  
+
+"GC Thread#0" os_prio=2 cpu=0.00ms elapsed=17.82s tid=0x00000243d71196a0 nid=36196 runnable  
+
+JNI global refs: 13, weak refs: 0
+

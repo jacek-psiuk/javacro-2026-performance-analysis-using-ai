@@ -1,0 +1,73 @@
+{
+  "description": "Cache key without equals/hashCode, unbounded static map (section1 Ex4). Two histograms + heap dump.",
+  "sources": [
+    {
+      "from": "src/main/java/hr/javacro/section1/Ex4.java",
+      "replace": [
+        [
+          "\"Serving reports. Memory keeps growing, so take a heap dump with: jcmd \"\n                + ProcessHandle.current().pid() + \" GC.heap_dump ex4.hprof\"",
+          "\"Serving reports, PID \"\n                + ProcessHandle.current().pid()"
+        ]
+      ]
+    }
+  ],
+  "main": "hr.javacro.section1.Ex4",
+  "record": {
+    "jvm": [
+      "-Xmx512m"
+    ],
+    "steps": [
+      [
+        "sleep",
+        3
+      ],
+      [
+        "context"
+      ],
+      [
+        "histogram",
+        1
+      ],
+      [
+        "sleep",
+        8
+      ],
+      [
+        "histogram",
+        2
+      ],
+      [
+        "heap_dump"
+      ]
+    ]
+  },
+  "prompt": "We are worried that the heap of our report-caching service keeps growing. Check whether it leaks memory.",
+  "expected": {
+    "verdicts": [
+      "REQUIRED"
+    ],
+    "forbidden_titles": "deadlock|contention|native",
+    "issues": [
+      {
+        "id": "cache-key-without-equals",
+        "match": "leak|equals|hashCode|cache|ReportKey|grow",
+        "severities": [
+          "Critical",
+          "High"
+        ],
+        "lines": {
+          "Ex4.java": [
+            25,
+            26,
+            27,
+            29,
+            43,
+            46,
+            47
+          ]
+        },
+        "rank": 1
+      }
+    ]
+  }
+}

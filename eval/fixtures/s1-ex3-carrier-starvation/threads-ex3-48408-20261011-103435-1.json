@@ -1,0 +1,662 @@
+{
+  "threadDump": {
+    "processId": "48408",
+    "time": "2026-10-11T08:34:49.012342300Z",
+    "runtimeVersion": "25.0.2+10-LTS",
+    "threadContainers": [
+      {
+        "container": "<root>",
+        "parent": null,
+        "owner": null,
+        "threads": [
+          {
+            "tid": "3",
+            "time": "2026-10-11T08:34:49.044758800Z",
+            "name": "main",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base\/java.lang.Thread.sleepNanos0(Native Method)",
+              "java.base\/java.lang.Thread.sleepNanos(Thread.java:509)",
+              "java.base\/java.lang.Thread.sleep(Thread.java:540)",
+              "hr.javacro.section1.Ex3.sleep(Ex3.java:75)",
+              "hr.javacro.section1.Ex3.main(Ex3.java:52)"
+            ]
+          },
+          {
+            "tid": "15",
+            "time": "2026-10-11T08:34:49.049294200Z",
+            "name": "Reference Handler",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/java.lang.ref.Reference.waitForReferencePendingList(Native Method)",
+              "java.base\/java.lang.ref.Reference.processPendingReferences(Reference.java:246)",
+              "java.base\/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)"
+            ]
+          },
+          {
+            "tid": "16",
+            "time": "2026-10-11T08:34:49.050295200Z",
+            "name": "Finalizer",
+            "state": "WAITING",
+            "waitingOn": "java.lang.ref.ReferenceQueue$Lock@6c60c601",
+            "stack": [
+              "java.base\/java.lang.Object.wait0(Native Method)",
+              "java.base\/java.lang.Object.wait(Object.java:389)",
+              "java.base\/java.lang.Object.wait(Object.java:351)",
+              "java.base\/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:137)",
+              "java.base\/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:215)",
+              "java.base\/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:165)"
+            ],
+            "monitorsOwned": [
+              {
+                "depth": 4,
+                "locks": [
+                  "java.lang.ref.ReferenceQueue$Lock@6c60c601"
+                ]
+              }
+            ]
+          },
+          {
+            "tid": "17",
+            "time": "2026-10-11T08:34:49.064347700Z",
+            "name": "Signal Dispatcher",
+            "state": "RUNNABLE",
+            "stack": [
+            ]
+          },
+          {
+            "tid": "18",
+            "time": "2026-10-11T08:34:49.065343800Z",
+            "name": "Attach Listener",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.ThreadSnapshot.create(Native Method)",
+              "java.base\/jdk.internal.vm.ThreadSnapshot.of(ThreadSnapshot.java:60)",
+              "java.base\/jdk.internal.vm.ThreadDumper.dumpThread(ThreadDumper.java:316)",
+              "java.base\/jdk.internal.vm.ThreadDumper.dumpThreads(ThreadDumper.java:291)",
+              "java.base\/jdk.internal.vm.ThreadDumper.dumpThreadsToJson(ThreadDumper.java:266)",
+              "java.base\/jdk.internal.vm.ThreadDumper.dumpThreadsToFile(ThreadDumper.java:131)",
+              "java.base\/jdk.internal.vm.ThreadDumper.dumpThreadsToJson(ThreadDumper.java:89)"
+            ]
+          },
+          {
+            "tid": "33",
+            "time": "2026-10-11T08:34:49.066848400Z",
+            "name": "Notification Thread",
+            "state": "RUNNABLE",
+            "stack": [
+            ]
+          },
+          {
+            "tid": "34",
+            "time": "2026-10-11T08:34:49.067346800Z",
+            "name": "Common-Cleaner",
+            "state": "TIMED_WAITING",
+            "waitingOn": "java.lang.ref.ReferenceQueue$Lock@586fde9e",
+            "stack": [
+              "java.base\/java.lang.Object.wait0(Native Method)",
+              "java.base\/java.lang.Object.wait(Object.java:389)",
+              "java.base\/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:123)",
+              "java.base\/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:201)",
+              "java.base\/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:146)",
+              "java.base\/java.lang.Thread.run(Thread.java:1474)",
+              "java.base\/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:148)"
+            ],
+            "monitorsOwned": [
+              {
+                "depth": 3,
+                "locks": [
+                  "java.lang.ref.ReferenceQueue$Lock@586fde9e"
+                ]
+              }
+            ]
+          },
+          {
+            "tid": "35",
+            "time": "2026-10-11T08:34:49.069343600Z",
+            "name": "VirtualThread-unblocker",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/java.lang.VirtualThread.takeVirtualThreadListToUnblock(Native Method)",
+              "java.base\/java.lang.VirtualThread.unblockVirtualThreads(VirtualThread.java:1507)",
+              "java.base\/java.lang.Thread.run(Thread.java:1474)",
+              "java.base\/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:148)"
+            ]
+          },
+          {
+            "tid": "36",
+            "time": "2026-10-11T08:34:49.070345600Z",
+            "virtual": true,
+            "name": "heartbeat",
+            "state": "TIMED_WAITING",
+            "stack": [
+              "java.base\/java.lang.VirtualThread.parkNanos(VirtualThread.java:780)",
+              "java.base\/java.lang.VirtualThread.sleepNanos(VirtualThread.java:971)",
+              "java.base\/java.lang.Thread.sleepNanos(Thread.java:507)",
+              "java.base\/java.lang.Thread.sleep(Thread.java:540)",
+              "hr.javacro.section1.Ex3.sleep(Ex3.java:75)",
+              "hr.javacro.section1.Ex3.lambda$main$0(Ex3.java:33)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ]
+          },
+          {
+            "tid": "40",
+            "time": "2026-10-11T08:34:49.071345Z",
+            "virtual": true,
+            "name": "report-1",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "38"
+          },
+          {
+            "tid": "41",
+            "time": "2026-10-11T08:34:49.071345Z",
+            "virtual": true,
+            "name": "report-2",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "37"
+          },
+          {
+            "tid": "42",
+            "time": "2026-10-11T08:34:49.072345600Z",
+            "virtual": true,
+            "name": "report-3",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "46"
+          },
+          {
+            "tid": "45",
+            "time": "2026-10-11T08:34:49.073344Z",
+            "virtual": true,
+            "name": "report-4",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "44"
+          },
+          {
+            "tid": "47",
+            "time": "2026-10-11T08:34:49.073344Z",
+            "virtual": true,
+            "name": "report-5",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "60"
+          },
+          {
+            "tid": "48",
+            "time": "2026-10-11T08:34:49.080239500Z",
+            "virtual": true,
+            "name": "report-6",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "61"
+          },
+          {
+            "tid": "49",
+            "time": "2026-10-11T08:34:49.080752300Z",
+            "virtual": true,
+            "name": "report-7",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "43"
+          },
+          {
+            "tid": "50",
+            "time": "2026-10-11T08:34:49.080752300Z",
+            "virtual": true,
+            "name": "report-8",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "59"
+          },
+          {
+            "tid": "51",
+            "time": "2026-10-11T08:34:49.082167800Z",
+            "virtual": true,
+            "name": "report-9",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "62"
+          },
+          {
+            "tid": "52",
+            "time": "2026-10-11T08:34:49.082680700Z",
+            "virtual": true,
+            "name": "report-10",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "63"
+          },
+          {
+            "tid": "53",
+            "time": "2026-10-11T08:34:49.082680700Z",
+            "virtual": true,
+            "name": "report-11",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "65"
+          },
+          {
+            "tid": "54",
+            "time": "2026-10-11T08:34:49.089696700Z",
+            "virtual": true,
+            "name": "report-12",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "66"
+          },
+          {
+            "tid": "55",
+            "time": "2026-10-11T08:34:49.093163800Z",
+            "virtual": true,
+            "name": "report-13",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "67"
+          },
+          {
+            "tid": "56",
+            "time": "2026-10-11T08:34:49.094179Z",
+            "virtual": true,
+            "name": "report-14",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "64"
+          },
+          {
+            "tid": "57",
+            "time": "2026-10-11T08:34:49.095180600Z",
+            "virtual": true,
+            "name": "report-15",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "69"
+          },
+          {
+            "tid": "58",
+            "time": "2026-10-11T08:34:49.096182700Z",
+            "virtual": true,
+            "name": "report-16",
+            "state": "RUNNABLE",
+            "stack": [
+              "hr.javacro.section1.Ex3.crunch(Ex3.java:67)",
+              "hr.javacro.section1.Ex3.computeReport(Ex3.java:61)",
+              "java.base\/java.lang.VirtualThread.run(VirtualThread.java:456)"
+            ],
+            "carrier": "68"
+          }
+        ],
+        "threadCount": "25"
+      },
+      {
+        "container": "java.util.concurrent.ThreadPoolExecutor@12a3a380",
+        "parent": "<root>",
+        "owner": null,
+        "threads": [
+        ],
+        "threadCount": "0"
+      },
+      {
+        "container": "ForkJoinPool-1\/jdk.internal.vm.SharedThreadContainer@6ca587c0",
+        "parent": "<root>",
+        "owner": null,
+        "threads": [
+          {
+            "tid": "37",
+            "time": "2026-10-11T08:34:49.108717100Z",
+            "name": "ForkJoinPool-1-worker-1",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "38",
+            "time": "2026-10-11T08:34:49.109717500Z",
+            "name": "ForkJoinPool-1-worker-2",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "39",
+            "time": "2026-10-11T08:34:49.112717900Z",
+            "name": "ForkJoinPool-1-delayScheduler",
+            "state": "WAITING",
+            "stack": [
+              "java.base\/jdk.internal.misc.Unsafe.park(Native Method)",
+              "java.base\/java.util.concurrent.DelayScheduler.loop(DelayScheduler.java:253)",
+              "java.base\/java.util.concurrent.DelayScheduler.run(DelayScheduler.java:221)"
+            ]
+          },
+          {
+            "tid": "43",
+            "time": "2026-10-11T08:34:49.113046100Z",
+            "name": "ForkJoinPool-1-worker-3",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "46",
+            "time": "2026-10-11T08:34:49.118164800Z",
+            "name": "ForkJoinPool-1-worker-5",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "44",
+            "time": "2026-10-11T08:34:49.124182400Z",
+            "name": "ForkJoinPool-1-worker-4",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "59",
+            "time": "2026-10-11T08:34:49.124182400Z",
+            "name": "ForkJoinPool-1-worker-6",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "60",
+            "time": "2026-10-11T08:34:49.125184700Z",
+            "name": "ForkJoinPool-1-worker-7",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "61",
+            "time": "2026-10-11T08:34:49.125184700Z",
+            "name": "ForkJoinPool-1-worker-8",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "62",
+            "time": "2026-10-11T08:34:49.126184300Z",
+            "name": "ForkJoinPool-1-worker-9",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "63",
+            "time": "2026-10-11T08:34:49.127180300Z",
+            "name": "ForkJoinPool-1-worker-10",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "64",
+            "time": "2026-10-11T08:34:49.127180300Z",
+            "name": "ForkJoinPool-1-worker-11",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "65",
+            "time": "2026-10-11T08:34:49.130708800Z",
+            "name": "ForkJoinPool-1-worker-12",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "66",
+            "time": "2026-10-11T08:34:49.131711700Z",
+            "name": "ForkJoinPool-1-worker-13",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "67",
+            "time": "2026-10-11T08:34:49.131711700Z",
+            "name": "ForkJoinPool-1-worker-14",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "68",
+            "time": "2026-10-11T08:34:49.132714700Z",
+            "name": "ForkJoinPool-1-worker-15",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          },
+          {
+            "tid": "69",
+            "time": "2026-10-11T08:34:49.132714700Z",
+            "name": "ForkJoinPool-1-worker-16",
+            "state": "RUNNABLE",
+            "stack": [
+              "java.base\/jdk.internal.vm.Continuation.run(Continuation.java:251)",
+              "java.base\/java.lang.VirtualThread.runContinuation(VirtualThread.java:293)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750)",
+              "java.base\/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742)",
+              "java.base\/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659)",
+              "java.base\/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511)",
+              "java.base\/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450)",
+              "java.base\/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019)",
+              "java.base\/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)"
+            ]
+          }
+        ],
+        "threadCount": "17"
+      },
+      {
+        "container": "ForkJoinPool.commonPool\/jdk.internal.vm.SharedThreadContainer@5df6ab00",
+        "parent": "<root>",
+        "owner": null,
+        "threads": [
+        ],
+        "threadCount": "0"
+      }
+    ]
+  }
+}

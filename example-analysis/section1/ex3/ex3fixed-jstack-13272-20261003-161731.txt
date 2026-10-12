@@ -1,0 +1,219 @@
+﻿2026-10-03 16:17:33
+Full thread dump OpenJDK 64-Bit Server VM (25.0.4.1+10-LTS mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x000001c76547f310, length=23, elements={
+0x000001c73e7fefd0, 0x000001c764b325f0, 0x000001c764b33050, 0x000001c764b34d70,
+0x000001c764b384f0, 0x000001c764b390b0, 0x000001c764b36150, 0x000001c764b37040,
+0x000001c764b42cf0, 0x000001c76547dd20, 0x000001c7654748a0, 0x000001c76548cd80,
+0x000001c76548fed0, 0x000001c765492ee0, 0x000001c765495910, 0x000001c7654a5500,
+0x000001c7654a5cc0, 0x000001c7654a6480, 0x000001c7654a9860, 0x000001c764b3eae0,
+0x000001c7654d2620, 0x000001c7654cc860, 0x000001c7654cd800
+}
+
+"main" #3 [14144] prio=5 os_prio=0 cpu=78.12ms elapsed=10.69s tid=0x000001c73e7fefd0 nid=14144 waiting on condition  [0x0000005de94ff000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleepNanos0(java.base@25.0.4.1/Native Method)
+	at java.lang.Thread.sleepNanos(java.base@25.0.4.1/Thread.java:509)
+	at java.lang.Thread.sleep(java.base@25.0.4.1/Thread.java:540)
+	at hr.javacro.section1.Ex3Fixed.sleep(Ex3Fixed.java:71)
+	at hr.javacro.section1.Ex3Fixed.main(Ex3Fixed.java:48)
+
+"Reference Handler" #14 [21276] daemon prio=10 os_prio=2 cpu=0.00ms elapsed=10.66s tid=0x000001c764b325f0 nid=21276 waiting on condition  [0x0000005de9cff000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@25.0.4.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@25.0.4.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@25.0.4.1/Reference.java:208)
+
+"Finalizer" #15 [21296] daemon prio=8 os_prio=1 cpu=0.00ms elapsed=10.66s tid=0x000001c764b33050 nid=21296 in Object.wait()  [0x0000005de9dff000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@25.0.4.1/Native Method)
+	- waiting on <0x00000006230022e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@25.0.4.1/Object.java:389)
+	at java.lang.Object.wait(java.base@25.0.4.1/Object.java:351)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@25.0.4.1/ReferenceQueue.java:137)
+	at java.lang.ref.ReferenceQueue.remove(java.base@25.0.4.1/ReferenceQueue.java:215)
+	- locked <0x00000006230022e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@25.0.4.1/Finalizer.java:165)
+
+"Signal Dispatcher" #16 [15144] daemon prio=9 os_prio=2 cpu=0.00ms elapsed=10.66s tid=0x000001c764b34d70 nid=15144 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Attach Listener" #17 [19028] daemon prio=5 os_prio=2 cpu=0.00ms elapsed=10.66s tid=0x000001c764b384f0 nid=19028 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Service Thread" #18 [25672] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=10.66s tid=0x000001c764b390b0 nid=25672 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Monitor Deflation Thread" #19 [19132] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=10.66s tid=0x000001c764b36150 nid=19132 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"C2 CompilerThread0" #20 [22076] daemon prio=9 os_prio=2 cpu=0.00ms elapsed=10.66s tid=0x000001c764b37040 nid=22076 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"C1 CompilerThread0" #23 [24424] daemon prio=9 os_prio=2 cpu=31.25ms elapsed=10.66s tid=0x000001c764b42cf0 nid=24424 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+"Notification Thread" #24 [17352] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=10.66s tid=0x000001c76547dd20 nid=17352 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+"Common-Cleaner" #25 [23620] daemon prio=8 os_prio=1 cpu=0.00ms elapsed=10.65s tid=0x000001c7654748a0 nid=23620 in Object.wait()  [0x0000005dea5fe000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@25.0.4.1/Native Method)
+	- waiting on <0x0000000623017c50> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@25.0.4.1/Object.java:389)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@25.0.4.1/ReferenceQueue.java:123)
+	at java.lang.ref.ReferenceQueue.remove(java.base@25.0.4.1/ReferenceQueue.java:201)
+	- locked <0x0000000623017c50> (a java.lang.ref.ReferenceQueue$Lock)
+	at jdk.internal.ref.CleanerImpl.run(java.base@25.0.4.1/CleanerImpl.java:146)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+	at jdk.internal.misc.InnocuousThread.run(java.base@25.0.4.1/InnocuousThread.java:148)
+
+"VirtualThread-unblocker" #26 [12988] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=10.64s tid=0x000001c76548cd80 nid=12988 runnable  [0x0000005dea6ff000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.VirtualThread.takeVirtualThreadListToUnblock(java.base@25.0.4.1/Native Method)
+	at java.lang.VirtualThread.unblockVirtualThreads(java.base@25.0.4.1/VirtualThread.java:1519)
+	at java.lang.VirtualThread$$Lambda/0x0000000038002df0.run(java.base@25.0.4.1/Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+	at jdk.internal.misc.InnocuousThread.run(java.base@25.0.4.1/InnocuousThread.java:148)
+
+"ForkJoinPool-1-worker-1" #28 [5112] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=10.64s tid=0x000001c76548fed0 nid=5112 waiting on condition  [0x0000005dea7ff000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@25.0.4.1/Native Method)
+	- parking to wait for  <0x00000006230594f8> (a java.util.concurrent.ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@25.0.4.1/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@25.0.4.1/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@25.0.4.1/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@25.0.4.1/ForkJoinWorkerThread.java:187)
+
+"ForkJoinPool-1-worker-2" #29 [25248] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=10.63s tid=0x000001c765492ee0 nid=25248 waiting on condition  [0x0000005dea8fe000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@25.0.4.1/Native Method)
+	- parking to wait for  <0x00000006230594f8> (a java.util.concurrent.ForkJoinPool)
+	at java.util.concurrent.ForkJoinPool.awaitWork(java.base@25.0.4.1/ForkJoinPool.java:2109)
+	at java.util.concurrent.ForkJoinPool.deactivate(java.base@25.0.4.1/ForkJoinPool.java:2063)
+	at java.util.concurrent.ForkJoinPool.runWorker(java.base@25.0.4.1/ForkJoinPool.java:2027)
+	at java.util.concurrent.ForkJoinWorkerThread.run(java.base@25.0.4.1/ForkJoinWorkerThread.java:187)
+
+"ForkJoinPool-1-delayScheduler" #30 [13696] daemon prio=5 os_prio=0 cpu=15.62ms elapsed=10.63s tid=0x000001c765495910 nid=13696 waiting on condition  [0x0000005dea9ff000]
+   java.lang.Thread.State: TIMED_WAITING (parking)
+	at jdk.internal.misc.Unsafe.park(java.base@25.0.4.1/Native Method)
+	at java.util.concurrent.DelayScheduler.loop(java.base@25.0.4.1/DelayScheduler.java:253)
+	at java.util.concurrent.DelayScheduler.run(java.base@25.0.4.1/DelayScheduler.java:221)
+
+"report-1" #31 [26300] daemon prio=5 os_prio=0 cpu=8359.38ms elapsed=8.63s tid=0x000001c7654a5500 nid=26300 runnable  [0x0000005deaafe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+	at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+	at hr.javacro.section1.Ex3Fixed$$Lambda/0x0000000038040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.4.1/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.4.1/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.4.1/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.4.1/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"report-2" #32 [3092] daemon prio=5 os_prio=0 cpu=8484.38ms elapsed=8.63s tid=0x000001c7654a5cc0 nid=3092 runnable  [0x0000005deabfe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+	at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+	at hr.javacro.section1.Ex3Fixed$$Lambda/0x0000000038040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.4.1/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.4.1/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.4.1/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.4.1/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"report-3" #33 [18664] daemon prio=5 os_prio=0 cpu=6453.12ms elapsed=8.63s tid=0x000001c7654a6480 nid=18664 runnable  [0x0000005deacfe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+	at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+	at hr.javacro.section1.Ex3Fixed$$Lambda/0x0000000038040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.4.1/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.4.1/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.4.1/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.4.1/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"report-4" #34 [24004] daemon prio=5 os_prio=0 cpu=6375.00ms elapsed=8.63s tid=0x000001c7654a9860 nid=24004 runnable  [0x0000005deadfe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+	at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+	at hr.javacro.section1.Ex3Fixed$$Lambda/0x0000000038040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.4.1/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.4.1/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.4.1/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.4.1/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"report-5" #35 [5496] daemon prio=5 os_prio=0 cpu=8406.25ms elapsed=8.63s tid=0x000001c764b3eae0 nid=5496 runnable  [0x0000005deaefe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+	at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+	at hr.javacro.section1.Ex3Fixed$$Lambda/0x0000000038040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.4.1/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.4.1/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.4.1/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.4.1/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"report-6" #36 [21576] daemon prio=5 os_prio=0 cpu=8421.88ms elapsed=8.63s tid=0x000001c7654d2620 nid=21576 runnable  [0x0000005deaffe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+	at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+	at hr.javacro.section1.Ex3Fixed$$Lambda/0x0000000038040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.4.1/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.4.1/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.4.1/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.4.1/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"report-7" #37 [13808] daemon prio=5 os_prio=0 cpu=6609.38ms elapsed=8.63s tid=0x000001c7654cc860 nid=13808 runnable  [0x0000005deb0fe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+	at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+	at hr.javacro.section1.Ex3Fixed$$Lambda/0x0000000038040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.4.1/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.4.1/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.4.1/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.4.1/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"report-8" #38 [21392] daemon prio=5 os_prio=0 cpu=6203.12ms elapsed=8.63s tid=0x000001c7654cd800 nid=21392 runnable  [0x0000005deb1fe000]
+   java.lang.Thread.State: RUNNABLE
+	at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+	at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+	at hr.javacro.section1.Ex3Fixed$$Lambda/0x0000000038040438.run(Unknown Source)
+	at java.util.concurrent.Executors$RunnableAdapter.call(java.base@25.0.4.1/Executors.java:545)
+	at java.util.concurrent.FutureTask.run(java.base@25.0.4.1/FutureTask.java:328)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(java.base@25.0.4.1/ThreadPoolExecutor.java:1090)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(java.base@25.0.4.1/ThreadPoolExecutor.java:614)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+"VM Thread" os_prio=2 cpu=15.62ms elapsed=10.67s tid=0x000001c764b1ec50 nid=12476 runnable  
+
+"VM Periodic Task Thread" os_prio=2 cpu=0.00ms elapsed=10.68s tid=0x000001c764b12390 nid=23616 waiting on condition  
+
+"G1 Service" os_prio=2 cpu=0.00ms elapsed=10.69s tid=0x000001c7649dcda0 nid=25724 runnable  
+
+"G1 Refine#0" os_prio=2 cpu=0.00ms elapsed=10.69s tid=0x000001c7649dc190 nid=13704 runnable  
+
+"G1 Conc#0" os_prio=2 cpu=0.00ms elapsed=10.69s tid=0x000001c740cd9bd0 nid=26588 runnable  
+
+"G1 Main Marker" os_prio=2 cpu=0.00ms elapsed=10.69s tid=0x000001c740cd8eb0 nid=3924 runnable  
+
+"GC Thread#0" os_prio=2 cpu=0.00ms elapsed=10.69s tid=0x000001c740cc0060 nid=17360 runnable  
+
+JNI global refs: 5, weak refs: 0
+

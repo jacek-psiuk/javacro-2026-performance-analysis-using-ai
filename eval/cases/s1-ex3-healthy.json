@@ -1,0 +1,68 @@
+{
+  "description": "Healthy twin of s1-ex3 (Ex3Fixed renamed to Ex3): CPU work on platform threads, heartbeat keeps running.",
+  "sources": [
+    {
+      "from": "src/main/java/hr/javacro/section1/Ex3Fixed.java",
+      "to": "src/main/java/hr/javacro/section1/Ex3.java",
+      "replace": [
+        [
+          "Ex3Fixed",
+          "Ex3"
+        ],
+        [
+          "CPU-bound tasks on platform threads. Heartbeat keeps going, compare dumps with Ex3:",
+          "report threads."
+        ],
+        [
+          "IO.println(\"  jstack \" + ProcessHandle.current().pid());",
+          "IO.println(\"\");"
+        ],
+        [
+          "IO.println(\"  jcmd \" + ProcessHandle.current().pid() + \" Thread.dump_to_file -format=json ex3fixed.json\");",
+          "IO.println(\"\");"
+        ]
+      ]
+    }
+  ],
+  "main": "hr.javacro.section1.Ex3",
+  "record": {
+    "steps": [
+      [
+        "sleep",
+        6
+      ],
+      [
+        "context"
+      ],
+      [
+        "jstack",
+        1
+      ],
+      [
+        "threads_json",
+        1
+      ],
+      [
+        "sleep",
+        4
+      ],
+      [
+        "jstack",
+        2
+      ],
+      [
+        "threads_json",
+        2
+      ]
+    ]
+  },
+  "prompt": "Our service runs CPU-heavy report jobs next to a periodic heartbeat. We suspect the heartbeat stalls while the reports run. Check whether the service is healthy, and what is wrong if it is not.",
+  "expected": {
+    "verdicts": [
+      "NONE",
+      "RECOMMENDED"
+    ],
+    "forbidden_titles": "starv|carrier|deadlock|leak",
+    "issues": []
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "description": "Direct ByteBuffers kept forever for lost acks (section1 Ex5). NMT baseline + 2 diffs, OS memory, heap dump.",
+  "sources": [
+    {
+      "from": "src/main/java/hr/javacro/section1/Ex5.java",
+      "replace": [
+        [
+          "Sending messages. Heap stays small, the process does not. Check native memory with:",
+          "Sending messages."
+        ],
+        [
+          "IO.println(\"  jcmd \" + ProcessHandle.current().pid() + \" VM.native_memory baseline\");",
+          "IO.println(\"\");"
+        ],
+        [
+          "IO.println(\"  jcmd \" + ProcessHandle.current().pid() + \" VM.native_memory summary.diff\");",
+          "IO.println(\"\");"
+        ]
+      ]
+    }
+  ],
+  "main": "hr.javacro.section1.Ex5",
+  "record": {
+    "jvm": [
+      "-Xmx256m",
+      "-XX:NativeMemoryTracking=summary"
+    ],
+    "steps": [
+      [
+        "sleep",
+        3
+      ],
+      [
+        "context"
+      ],
+      [
+        "nmt_baseline"
+      ],
+      [
+        "nmt_summary",
+        0
+      ],
+      [
+        "os_memory"
+      ],
+      [
+        "sleep",
+        10
+      ],
+      [
+        "nmt_diff",
+        1
+      ],
+      [
+        "os_memory"
+      ],
+      [
+        "sleep",
+        10
+      ],
+      [
+        "nmt_diff",
+        2
+      ],
+      [
+        "os_memory"
+      ],
+      [
+        "heap_dump"
+      ]
+    ]
+  },
+  "prompt": "We are worried that the memory of our message-sender process keeps growing, while the Java heap looks small. Check whether it leaks memory.",
+  "expected": {
+    "verdicts": [
+      "REQUIRED"
+    ],
+    "forbidden_titles": "deadlock|contention|equals|hashCode",
+    "issues": [
+      {
+        "id": "direct-buffers-never-released",
+        "match": "direct|native|ByteBuffer|PENDING_ACKS|ack|leak|off-heap",
+        "severities": [
+          "Critical",
+          "High"
+        ],
+        "lines": {
+          "Ex5.java": [
+            34,
+            36,
+            37,
+            38,
+            39,
+            42,
+            43,
+            58,
+            61,
+            62
+          ]
+        },
+        "rank": 1
+      }
+    ]
+  }
+}

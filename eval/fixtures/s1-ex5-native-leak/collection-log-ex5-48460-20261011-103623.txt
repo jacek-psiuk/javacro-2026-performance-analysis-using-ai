@@ -1,0 +1,12 @@
++   3.2s  jcmd.EXE 48460 VM.version
++   3.4s  jcmd.EXE 48460 VM.uptime
++   3.7s  jcmd.EXE 48460 VM.flags
++   3.9s  jcmd.EXE 48460 VM.command_line
++   4.1s  jcmd.EXE 48460 VM.native_memory baseline
++   4.2s  jcmd.EXE 48460 VM.native_memory summary > nmt-ex5-48460-20261011-103623-0-summary.txt
++   4.4s  OS memory of 48460
++  14.8s  jcmd.EXE 48460 VM.native_memory summary.diff > nmt-ex5-48460-20261011-103623-1-diff.txt
++  15.1s  OS memory of 48460
++  25.4s  jcmd.EXE 48460 VM.native_memory summary.diff > nmt-ex5-48460-20261011-103623-2-diff.txt
++  25.9s  OS memory of 48460
++  26.4s  jcmd.EXE 48460 GC.heap_dump heap-ex5-48460-20261011-103623.hprof

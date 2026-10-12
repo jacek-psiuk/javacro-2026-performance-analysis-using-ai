@@ -1,0 +1,58 @@
+{
+  "description": "Healthy twin of s1-ex4 (Ex4Fixed renamed to Ex4): record key, bounded LRU map.",
+  "sources": [
+    {
+      "from": "src/main/java/hr/javacro/section1/Ex4Fixed.java",
+      "to": "src/main/java/hr/javacro/section1/Ex4.java",
+      "replace": [
+        [
+          "Ex4Fixed",
+          "Ex4"
+        ],
+        [
+          "\"Serving reports. Memory stays flat - compare with Ex4 using: jcmd \"\n                + ProcessHandle.current().pid() + \" GC.class_histogram\"",
+          "\"Serving reports, PID \"\n                + ProcessHandle.current().pid()"
+        ]
+      ]
+    }
+  ],
+  "main": "hr.javacro.section1.Ex4",
+  "record": {
+    "jvm": [
+      "-Xmx512m"
+    ],
+    "steps": [
+      [
+        "sleep",
+        3
+      ],
+      [
+        "context"
+      ],
+      [
+        "histogram",
+        1
+      ],
+      [
+        "sleep",
+        8
+      ],
+      [
+        "histogram",
+        2
+      ],
+      [
+        "heap_dump"
+      ]
+    ]
+  },
+  "prompt": "We are worried that the heap of our report-caching service keeps growing. Check whether it leaks memory.",
+  "expected": {
+    "verdicts": [
+      "NONE",
+      "RECOMMENDED"
+    ],
+    "forbidden_titles": "leak|equals|hashCode|grow",
+    "issues": []
+  }
+}

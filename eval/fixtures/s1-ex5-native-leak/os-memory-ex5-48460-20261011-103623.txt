@@ -1,0 +1,3 @@
++4s PrivateMemorySize64=496390144 WorkingSet64=459419648
++15s PrivateMemorySize64=516067328 WorkingSet64=680476672
++26s PrivateMemorySize64=560164864 WorkingSet64=723894272

@@ -1,0 +1,9 @@
+PID: 4840
+Serving reports, PID 4840
+  2s: requests=2000, renders=300, cache entries=300, heap used=7 MB
+  4s: requests=4000, renders=300, cache entries=300, heap used=7 MB
+  6s: requests=6000, renders=300, cache entries=300, heap used=5 MB
+  8s: requests=8000, renders=300, cache entries=300, heap used=5 MB
+ 10s: requests=10000, renders=300, cache entries=300, heap used=5 MB
+ 12s: requests=12000, renders=300, cache entries=300, heap used=5 MB
+ 14s: requests=14000, renders=300, cache entries=300, heap used=4 MB

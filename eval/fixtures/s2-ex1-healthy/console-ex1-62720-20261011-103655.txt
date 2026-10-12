@@ -1,0 +1,8 @@
+PID: 62720
+Processing orders with 8 workers, PID 62720
+Throughput: 115149 orders/s
+Throughput: 98146 orders/s
+Throughput: 75268 orders/s
+Throughput: 76920 orders/s
+Throughput: 70774 orders/s
+Throughput: 61715 orders/s

@@ -1,0 +1,15 @@
+PID: 48460
+Sending messages.
+
+
+  2s: messages sent=2000, heap used=89 MB
+  4s: messages sent=4000, heap used=109 MB
+  6s: messages sent=6000, heap used=91 MB
+  9s: messages sent=8000, heap used=73 MB
+ 11s: messages sent=10000, heap used=54 MB
+ 14s: messages sent=12000, heap used=36 MB
+ 16s: messages sent=14000, heap used=18 MB
+ 18s: messages sent=16000, heap used=151 MB
+ 21s: messages sent=18000, heap used=133 MB
+ 23s: messages sent=20000, heap used=115 MB
+ 25s: messages sent=22000, heap used=96 MB

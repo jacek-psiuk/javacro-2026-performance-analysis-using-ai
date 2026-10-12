@@ -1,0 +1,1 @@
+﻿process memory: 3s: 187 MB working set, 381 MB private | 15s: 339 MB working set, 498 MB private | 30s: 351 MB working set, 509 MB private

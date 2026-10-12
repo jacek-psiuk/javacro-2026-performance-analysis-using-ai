@@ -1,0 +1,75 @@
+{
+  "description": "Slow remote call inside a synchronized method (section1 Ex2). Three thread dumps 4 s apart.",
+  "sources": [
+    {
+      "from": "src/main/java/hr/javacro/section1/Ex2.java",
+      "replace": [
+        [
+          "The app is slow, so take a few thread dumps with: jstack -l ",
+          "PID "
+        ]
+      ]
+    }
+  ],
+  "main": "hr.javacro.section1.Ex2",
+  "record": {
+    "steps": [
+      [
+        "sleep",
+        4
+      ],
+      [
+        "context"
+      ],
+      [
+        "jstack",
+        1
+      ],
+      [
+        "sleep",
+        4
+      ],
+      [
+        "jstack",
+        2
+      ],
+      [
+        "sleep",
+        4
+      ],
+      [
+        "jstack",
+        3
+      ]
+    ]
+  },
+  "prompt": "Our price lookup service runs 8 worker threads, but its throughput looks low to us (see the console output). Find out what limits it.",
+  "expected": {
+    "verdicts": [
+      "REQUIRED"
+    ],
+    "forbidden_titles": "deadlock|leak",
+    "issues": [
+      {
+        "id": "lock-held-during-remote-call",
+        "match": "contention|lock|blocked|synchroni|serializ",
+        "severities": [
+          "Critical",
+          "High"
+        ],
+        "lines": {
+          "Ex2.java": [
+            26,
+            27,
+            28,
+            30,
+            31,
+            36,
+            37
+          ]
+        },
+        "rank": 1
+      }
+    ]
+  }
+}

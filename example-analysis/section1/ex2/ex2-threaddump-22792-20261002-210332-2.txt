@@ -1,0 +1,223 @@
+﻿2026-10-02 21:03:32
+Full thread dump OpenJDK 64-Bit Server VM (25.0.4.1+10-LTS mixed mode, sharing):
+
+Threads class SMR info:
+_java_thread_list=0x0000023e1b0a44b0, length=19, elements={
+0x0000023e6fbb8640, 0x0000023e7ee94750, 0x0000023e7ee951b0, 0x0000023e7ee97e10,
+0x0000023e7ee99470, 0x0000023e7ee9a7d0, 0x0000023e7ee9bb30, 0x0000023e7ee9def0,
+0x0000023e7eea76f0, 0x0000023e7eeed830, 0x0000023e1b082850, 0x0000023e1b0904e0,
+0x0000023e1b090ca0, 0x0000023e1b091460, 0x0000023e1b091c20, 0x0000023e1b0923e0,
+0x0000023e1b09b650, 0x0000023e1b09e640, 0x0000023e1b0a3a60
+}
+
+"main" #3 [29500] prio=5 os_prio=0 cpu=109.38ms elapsed=10.50s tid=0x0000023e6fbb8640 nid=29500 waiting on condition  [0x000000cb797ff000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleepNanos0(java.base@25.0.4.1/Native Method)
+	at java.lang.Thread.sleepNanos(java.base@25.0.4.1/Thread.java:509)
+	at java.lang.Thread.sleep(java.base@25.0.4.1/Thread.java:540)
+	at hr.javacro.section1.Ex2.sleep(Ex2.java:77)
+	at hr.javacro.section1.Ex2.main(Ex2.java:68)
+
+   Locked ownable synchronizers:
+	- None
+
+"Reference Handler" #14 [5196] daemon prio=10 os_prio=2 cpu=0.00ms elapsed=10.46s tid=0x0000023e7ee94750 nid=5196 waiting on condition  [0x000000cb79fff000]
+   java.lang.Thread.State: RUNNABLE
+	at java.lang.ref.Reference.waitForReferencePendingList(java.base@25.0.4.1/Native Method)
+	at java.lang.ref.Reference.processPendingReferences(java.base@25.0.4.1/Reference.java:246)
+	at java.lang.ref.Reference$ReferenceHandler.run(java.base@25.0.4.1/Reference.java:208)
+
+   Locked ownable synchronizers:
+	- None
+
+"Finalizer" #15 [3068] daemon prio=8 os_prio=1 cpu=0.00ms elapsed=10.46s tid=0x0000023e7ee951b0 nid=3068 in Object.wait()  [0x000000cb7a0ff000]
+   java.lang.Thread.State: WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@25.0.4.1/Native Method)
+	- waiting on <0x00000006230022e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@25.0.4.1/Object.java:389)
+	at java.lang.Object.wait(java.base@25.0.4.1/Object.java:351)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@25.0.4.1/ReferenceQueue.java:137)
+	at java.lang.ref.ReferenceQueue.remove(java.base@25.0.4.1/ReferenceQueue.java:215)
+	- locked <0x00000006230022e8> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.ref.Finalizer$FinalizerThread.run(java.base@25.0.4.1/Finalizer.java:165)
+
+   Locked ownable synchronizers:
+	- None
+
+"Signal Dispatcher" #16 [17264] daemon prio=9 os_prio=2 cpu=0.00ms elapsed=10.46s tid=0x0000023e7ee97e10 nid=17264 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Attach Listener" #17 [27144] daemon prio=5 os_prio=2 cpu=0.00ms elapsed=10.46s tid=0x0000023e7ee99470 nid=27144 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Service Thread" #18 [4356] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=10.46s tid=0x0000023e7ee9a7d0 nid=4356 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Monitor Deflation Thread" #19 [18916] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=10.46s tid=0x0000023e7ee9bb30 nid=18916 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"C2 CompilerThread0" #20 [29576] daemon prio=9 os_prio=2 cpu=0.00ms elapsed=10.46s tid=0x0000023e7ee9def0 nid=29576 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+   Locked ownable synchronizers:
+	- None
+
+"C1 CompilerThread0" #23 [32012] daemon prio=9 os_prio=2 cpu=0.00ms elapsed=10.46s tid=0x0000023e7eea76f0 nid=32012 waiting on condition  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+   No compile task
+
+   Locked ownable synchronizers:
+	- None
+
+"Notification Thread" #24 [13196] daemon prio=9 os_prio=0 cpu=0.00ms elapsed=10.45s tid=0x0000023e7eeed830 nid=13196 runnable  [0x0000000000000000]
+   java.lang.Thread.State: RUNNABLE
+
+   Locked ownable synchronizers:
+	- None
+
+"Common-Cleaner" #25 [8060] daemon prio=8 os_prio=1 cpu=0.00ms elapsed=10.45s tid=0x0000023e1b082850 nid=8060 in Object.wait()  [0x000000cb7a8ff000]
+   java.lang.Thread.State: TIMED_WAITING (on object monitor)
+	at java.lang.Object.wait0(java.base@25.0.4.1/Native Method)
+	- waiting on <0x0000000623017c08> (a java.lang.ref.ReferenceQueue$Lock)
+	at java.lang.Object.wait(java.base@25.0.4.1/Object.java:389)
+	at java.lang.ref.ReferenceQueue.remove0(java.base@25.0.4.1/ReferenceQueue.java:123)
+	at java.lang.ref.ReferenceQueue.remove(java.base@25.0.4.1/ReferenceQueue.java:201)
+	- locked <0x0000000623017c08> (a java.lang.ref.ReferenceQueue$Lock)
+	at jdk.internal.ref.CleanerImpl.run(java.base@25.0.4.1/CleanerImpl.java:146)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+	at jdk.internal.misc.InnocuousThread.run(java.base@25.0.4.1/InnocuousThread.java:148)
+
+   Locked ownable synchronizers:
+	- None
+
+"worker-1" #26 [34384] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=10.42s tid=0x0000023e1b0904e0 nid=34384 waiting for monitor entry  [0x000000cb7a9ff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at hr.javacro.section1.Ex2$PriceCache.getPrice(Ex2.java:27)
+	- waiting to lock <0x000000062301fc70> (a hr.javacro.section1.Ex2$PriceCache)
+	at hr.javacro.section1.Ex2.lambda$main$0(Ex2.java:54)
+	at hr.javacro.section1.Ex2$$Lambda/0x0000000093040430.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- None
+
+"worker-2" #27 [9708] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=10.42s tid=0x0000023e1b090ca0 nid=9708 waiting for monitor entry  [0x000000cb7aaff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at hr.javacro.section1.Ex2$PriceCache.getPrice(Ex2.java:27)
+	- waiting to lock <0x000000062301fc70> (a hr.javacro.section1.Ex2$PriceCache)
+	at hr.javacro.section1.Ex2.lambda$main$0(Ex2.java:54)
+	at hr.javacro.section1.Ex2$$Lambda/0x0000000093040430.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- None
+
+"worker-3" #28 [30948] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=10.42s tid=0x0000023e1b091460 nid=30948 waiting for monitor entry  [0x000000cb7abff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at hr.javacro.section1.Ex2$PriceCache.getPrice(Ex2.java:27)
+	- waiting to lock <0x000000062301fc70> (a hr.javacro.section1.Ex2$PriceCache)
+	at hr.javacro.section1.Ex2.lambda$main$0(Ex2.java:54)
+	at hr.javacro.section1.Ex2$$Lambda/0x0000000093040430.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- None
+
+"worker-4" #29 [16336] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=10.42s tid=0x0000023e1b091c20 nid=16336 waiting for monitor entry  [0x000000cb7acff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at hr.javacro.section1.Ex2$PriceCache.getPrice(Ex2.java:27)
+	- waiting to lock <0x000000062301fc70> (a hr.javacro.section1.Ex2$PriceCache)
+	at hr.javacro.section1.Ex2.lambda$main$0(Ex2.java:54)
+	at hr.javacro.section1.Ex2$$Lambda/0x0000000093040430.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- None
+
+"worker-5" #30 [9308] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=10.42s tid=0x0000023e1b0923e0 nid=9308 waiting for monitor entry  [0x000000cb7adff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at hr.javacro.section1.Ex2$PriceCache.getPrice(Ex2.java:27)
+	- waiting to lock <0x000000062301fc70> (a hr.javacro.section1.Ex2$PriceCache)
+	at hr.javacro.section1.Ex2.lambda$main$0(Ex2.java:54)
+	at hr.javacro.section1.Ex2$$Lambda/0x0000000093040430.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- None
+
+"worker-6" #31 [24744] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=10.42s tid=0x0000023e1b09b650 nid=24744 waiting for monitor entry  [0x000000cb7aeff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at hr.javacro.section1.Ex2$PriceCache.getPrice(Ex2.java:27)
+	- waiting to lock <0x000000062301fc70> (a hr.javacro.section1.Ex2$PriceCache)
+	at hr.javacro.section1.Ex2.lambda$main$0(Ex2.java:54)
+	at hr.javacro.section1.Ex2$$Lambda/0x0000000093040430.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- None
+
+"worker-7" #32 [33644] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=10.42s tid=0x0000023e1b09e640 nid=33644 waiting for monitor entry  [0x000000cb7afff000]
+   java.lang.Thread.State: BLOCKED (on object monitor)
+	at hr.javacro.section1.Ex2$PriceCache.getPrice(Ex2.java:27)
+	- waiting to lock <0x000000062301fc70> (a hr.javacro.section1.Ex2$PriceCache)
+	at hr.javacro.section1.Ex2.lambda$main$0(Ex2.java:54)
+	at hr.javacro.section1.Ex2$$Lambda/0x0000000093040430.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- None
+
+"worker-8" #33 [5400] daemon prio=5 os_prio=0 cpu=0.00ms elapsed=10.42s tid=0x0000023e1b0a3a60 nid=5400 waiting on condition  [0x000000cb7b0fe000]
+   java.lang.Thread.State: TIMED_WAITING (sleeping)
+	at java.lang.Thread.sleepNanos0(java.base@25.0.4.1/Native Method)
+	at java.lang.Thread.sleepNanos(java.base@25.0.4.1/Thread.java:509)
+	at java.lang.Thread.sleep(java.base@25.0.4.1/Thread.java:540)
+	at hr.javacro.section1.Ex2.sleep(Ex2.java:77)
+	at hr.javacro.section1.Ex2$PriceCache.fetchFromRemote(Ex2.java:37)
+	at hr.javacro.section1.Ex2$PriceCache.getPrice(Ex2.java:30)
+	- locked <0x000000062301fc70> (a hr.javacro.section1.Ex2$PriceCache)
+	at hr.javacro.section1.Ex2.lambda$main$0(Ex2.java:54)
+	at hr.javacro.section1.Ex2$$Lambda/0x0000000093040430.run(Unknown Source)
+	at java.lang.Thread.runWith(java.base@25.0.4.1/Thread.java:1487)
+	at java.lang.Thread.run(java.base@25.0.4.1/Thread.java:1474)
+
+   Locked ownable synchronizers:
+	- None
+
+"VM Thread" os_prio=2 cpu=0.00ms elapsed=10.47s tid=0x0000023e7ee7ec00 nid=1048 runnable  
+
+"VM Periodic Task Thread" os_prio=2 cpu=0.00ms elapsed=10.48s tid=0x0000023e7ee6eb20 nid=4528 waiting on condition  
+
+"G1 Service" os_prio=2 cpu=15.62ms elapsed=10.49s tid=0x0000023e7ed35420 nid=31820 runnable  
+
+"G1 Refine#0" os_prio=2 cpu=0.00ms elapsed=10.49s tid=0x0000023e7ed34910 nid=25684 runnable  
+
+"G1 Conc#0" os_prio=2 cpu=0.00ms elapsed=10.50s tid=0x0000023e71e68450 nid=9232 runnable  
+
+"G1 Main Marker" os_prio=2 cpu=0.00ms elapsed=10.50s tid=0x0000023e71e66100 nid=16300 runnable  
+
+"GC Thread#0" os_prio=2 cpu=0.00ms elapsed=10.50s tid=0x0000023e71e4d130 nid=19820 runnable  
+
+JNI global refs: 5, weak refs: 0
+

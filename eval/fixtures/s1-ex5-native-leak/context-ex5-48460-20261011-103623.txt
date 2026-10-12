@@ -1,0 +1,22 @@
+$ jcmd 48460 VM.version
+48460:
+OpenJDK 64-Bit Server VM version 25.0.2+10-LTS
+JDK 25.0.2
+
+$ jcmd 48460 VM.uptime
+48460:
+3.607 s
+
+$ jcmd 48460 VM.flags
+48460:
+-XX:-AOTInvokeDynamicLinking -XX:-AOTRecordTraining -XX:-AOTReplayTraining -XX:CICompilerCount=12 -XX:ConcGCThreads=3 -XX:G1ConcRefinementThreads=13 -XX:G1EagerReclaimRemSetThreshold=10 -XX:G1HeapRegionSize=1048576 -XX:G1RemSetArrayOfCardsEntries=10 -XX:G1RemSetHowlMaxNumBuckets=8 -XX:G1RemSetHowlNumBuckets=4 -XX:InitialHeapSize=268435456 -XX:-IntelJccErratumMitigation -XX:MarkStackSize=4194304 -XX:MarkStackSizeMax=536870912 -XX:MaxHeapSize=268435456 -XX:MaxNewSize=160432128 -XX:MinHeapDeltaBytes=1048576 -XX:MinHeapSize=8388608 -XX:NativeMemoryTracking=summary -XX:NonNMethodCodeHeapSize=7602176 -XX:NonProfiledCodeHeapSize=122093568 -XX:ProfiledCodeHeapSize=121962496 -XX:ReservedCodeCacheSize=251658240 -XX:+SegmentedCodeCache -XX:SoftMaxHeapSize=268435456 -XX:+UseCompressedOops -XX:+UseG1GC -XX:-UseLargePagesIndividualAllocation -XX:X86ICacheSync=3 
+
+$ jcmd 48460 VM.command_line
+48460:
+VM Arguments:
+jvm_args: -Xmx256m -XX:NativeMemoryTracking=summary 
+java_command: hr.javacro.section1.Ex5
+java_class_path (initial): C:\Users\JACEK~1.PSI\AppData\Local\Temp\perf-eval-build-h3ebolxg\classes
+Launcher Type: SUN_STANDARD
+
+CPU count: 16

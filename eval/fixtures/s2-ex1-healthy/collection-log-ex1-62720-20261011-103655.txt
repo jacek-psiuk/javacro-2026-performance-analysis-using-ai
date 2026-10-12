@@ -1,0 +1,6 @@
++   5.2s  jcmd.EXE 62720 VM.version
++   5.6s  jcmd.EXE 62720 VM.uptime
++   6.0s  jcmd.EXE 62720 VM.flags
++   6.4s  jcmd.EXE 62720 VM.command_line
++   6.8s  jcmd.EXE 62720 JFR.start name=eval settings=profile duration=15s filename=C:\code\voluum\misc\javacro-2026\eval\fixtures\s2-ex1-healthy\jfr-ex1-62720-20261011-103655.jfr
++  30.7s  jcmd.EXE 62720 JFR.check

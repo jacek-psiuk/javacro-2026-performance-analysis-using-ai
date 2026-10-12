@@ -1,0 +1,16 @@
+heartbeat
+heartbeat
+heartbeat
+heartbeat
+PID: 48408
+Started 16 report threads.
+
+
+main: last heartbeat 2s ago
+main: last heartbeat 4s ago
+main: last heartbeat 6s ago
+main: last heartbeat 8s ago
+main: last heartbeat 10s ago
+main: last heartbeat 12s ago
+main: last heartbeat 14s ago
+main: last heartbeat 16s ago

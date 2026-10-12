@@ -1,0 +1,83 @@
+{
+  "description": "Order service with four problems (section2 Ex1), existing 15 s JFR recording (settings=profile).",
+  "sources": [
+    {
+      "from": "src/main/java/hr/javacro/section2/Ex1.java",
+      "replace": [
+        [
+          "\"Processing orders with 8 workers. To record: jcmd \" + ProcessHandle.current().pid()\n                + \" JFR.start settings=profile duration=30s filename=ex1.jfr\"",
+          "\"Processing orders with 8 workers, PID \" + ProcessHandle.current().pid()"
+        ]
+      ]
+    }
+  ],
+  "main": "hr.javacro.section2.Ex1",
+  "record": {
+    "copy": [
+      "jfr-recordings/ex1-15s.jfr"
+    ]
+  },
+  "prompt": "Our order-processing service (8 worker threads) is slower than we expect. Find out where the time goes. A 15 s JFR recording (settings=profile) taken under normal load is in perf-artifacts/.",
+  "expected": {
+    "verdicts": [
+      "REQUIRED"
+    ],
+    "forbidden_titles": "deadlock|leak",
+    "issues": [
+      {
+        "id": "audit-lock-contention",
+        "match": "contention|audit|lock|synchroni|blocked|serializ",
+        "severities": [
+          "Critical",
+          "High"
+        ],
+        "lines": {
+          "Ex1.java": [
+            89,
+            98,
+            99,
+            101,
+            102
+          ]
+        },
+        "rank": 1
+      },
+      {
+        "id": "regex-compiled-per-call",
+        "match": "regex|matches|Pattern",
+        "lines": {
+          "Ex1.java": [
+            70
+          ]
+        }
+      },
+      {
+        "id": "exceptions-as-control-flow",
+        "match": "exception|NumberFormat|parseInt",
+        "lines": {
+          "Ex1.java": [
+            74,
+            75,
+            76,
+            78
+          ]
+        }
+      },
+      {
+        "id": "boxing-and-string-format",
+        "match": "String\\.format|format|box|Double|allocat",
+        "lines": {
+          "Ex1.java": [
+            57,
+            65,
+            82,
+            83,
+            84,
+            85,
+            87
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+PID: 23960
+Workers started. PID 23960
+Throughput: 35 requests/s
+Throughput: 28 requests/s
+Throughput: 35 requests/s
+Throughput: 31 requests/s
+Throughput: 28 requests/s
+Throughput: 25 requests/s
+Throughput: 33 requests/s

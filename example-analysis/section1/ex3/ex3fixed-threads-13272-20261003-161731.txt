@@ -1,0 +1,166 @@
+13272
+2026-10-03T14:17:34.868547100Z
+25.0.4.1+10-LTS
+
+#3 "main" TIMED_WAITING 2026-10-03T14:17:34.890054Z
+    at java.base/java.lang.Thread.sleepNanos0(Native Method)
+    at java.base/java.lang.Thread.sleepNanos(Thread.java:509)
+    at java.base/java.lang.Thread.sleep(Thread.java:540)
+    at hr.javacro.section1.Ex3Fixed.sleep(Ex3Fixed.java:71)
+    at hr.javacro.section1.Ex3Fixed.main(Ex3Fixed.java:48)
+
+#14 "Reference Handler" RUNNABLE 2026-10-03T14:17:34.894056800Z
+    at java.base/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+    at java.base/java.lang.ref.Reference.processPendingReferences(Reference.java:246)
+    at java.base/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:208)
+
+#15 "Finalizer" WAITING 2026-10-03T14:17:34.896056700Z
+    at java.base/java.lang.Object.wait0(Native Method)
+    - waiting on <java.lang.ref.ReferenceQueue$Lock@4199c8e7>
+    at java.base/java.lang.Object.wait(Object.java:389)
+    at java.base/java.lang.Object.wait(Object.java:351)
+    at java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:137)
+    at java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:215)
+    - locked <java.lang.ref.ReferenceQueue$Lock@4199c8e7>
+    at java.base/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:165)
+
+#16 "Signal Dispatcher" RUNNABLE 2026-10-03T14:17:34.896056700Z
+
+#17 "Attach Listener" RUNNABLE 2026-10-03T14:17:34.897056800Z
+    at java.base/jdk.internal.vm.ThreadSnapshot.create(Native Method)
+    at java.base/jdk.internal.vm.ThreadSnapshot.of(ThreadSnapshot.java:62)
+    at java.base/jdk.internal.vm.ThreadDumper.dumpThread(ThreadDumper.java:181)
+    at java.base/jdk.internal.vm.ThreadDumper.lambda$dumpThreads$0(ThreadDumper.java:176)
+    at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:197)
+    at java.base/java.util.Spliterators$ArraySpliterator.forEachRemaining(Spliterators.java:1024)
+    at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:570)
+    at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:560)
+    at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:315)
+    at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734)
+    at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:803)
+    at java.base/jdk.internal.vm.ThreadDumper.dumpThreads(ThreadDumper.java:176)
+    at java.base/jdk.internal.vm.ThreadDumper.dumpThreads(ThreadDumper.java:172)
+    at java.base/jdk.internal.vm.ThreadDumper.dumpThreadsToFile(ThreadDumper.java:133)
+    at java.base/jdk.internal.vm.ThreadDumper.dumpThreads(ThreadDumper.java:73)
+
+#24 "Notification Thread" RUNNABLE 2026-10-03T14:17:34.897056800Z
+
+#25 "Common-Cleaner" TIMED_WAITING 2026-10-03T14:17:34.897056800Z
+    at java.base/java.lang.Object.wait0(Native Method)
+    - waiting on <java.lang.ref.ReferenceQueue$Lock@2002a8ad>
+    at java.base/java.lang.Object.wait(Object.java:389)
+    at java.base/java.lang.ref.ReferenceQueue.remove0(ReferenceQueue.java:123)
+    at java.base/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:201)
+    - locked <java.lang.ref.ReferenceQueue$Lock@2002a8ad>
+    at java.base/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:146)
+    at java.base/java.lang.Thread.run(Thread.java:1474)
+    at java.base/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:148)
+
+#26 "VirtualThread-unblocker" RUNNABLE 2026-10-03T14:17:34.898055200Z
+    at java.base/java.lang.VirtualThread.takeVirtualThreadListToUnblock(Native Method)
+    at java.base/java.lang.VirtualThread.unblockVirtualThreads(VirtualThread.java:1519)
+    at java.base/java.lang.Thread.run(Thread.java:1474)
+    at java.base/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:148)
+
+#27 "heartbeat" virtual TIMED_WAITING 2026-10-03T14:17:34.898055200Z
+    at java.base/java.lang.VirtualThread.parkNanos(VirtualThread.java:787)
+    at java.base/java.lang.VirtualThread.sleepNanos(VirtualThread.java:983)
+    at java.base/java.lang.Thread.sleepNanos(Thread.java:507)
+    at java.base/java.lang.Thread.sleep(Thread.java:540)
+    at hr.javacro.section1.Ex3Fixed.sleep(Ex3Fixed.java:71)
+    at hr.javacro.section1.Ex3Fixed.lambda$main$0(Ex3Fixed.java:28)
+    at java.base/java.lang.VirtualThread.run(VirtualThread.java:460)
+
+#28 "ForkJoinPool-1-worker-1" TIMED_WAITING 2026-10-03T14:17:34.904054200Z
+    at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+    - parking to wait for <java.util.concurrent.ForkJoinPool@3ca74fcb>
+    at java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2109)
+    at java.base/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2063)
+    at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2027)
+    at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+#29 "ForkJoinPool-1-worker-2" TIMED_WAITING 2026-10-03T14:17:34.905053600Z
+    at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+    - parking to wait for <java.util.concurrent.ForkJoinPool@3ca74fcb>
+    at java.base/java.util.concurrent.ForkJoinPool.awaitWork(ForkJoinPool.java:2109)
+    at java.base/java.util.concurrent.ForkJoinPool.deactivate(ForkJoinPool.java:2063)
+    at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2027)
+    at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187)
+
+#30 "ForkJoinPool-1-delayScheduler" TIMED_WAITING 2026-10-03T14:17:34.905053600Z
+    at java.base/jdk.internal.misc.Unsafe.park(Native Method)
+    at java.base/java.util.concurrent.DelayScheduler.loop(DelayScheduler.java:253)
+    at java.base/java.util.concurrent.DelayScheduler.run(DelayScheduler.java:221)
+
+#31 "report-1" RUNNABLE 2026-10-03T14:17:34.906054800Z
+    at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+    at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+    at java.base/java.lang.Thread.run(Thread.java:1474)
+
+#32 "report-2" RUNNABLE 2026-10-03T14:17:34.906054800Z
+    at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+    at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+    at java.base/java.lang.Thread.run(Thread.java:1474)
+
+#33 "report-3" RUNNABLE 2026-10-03T14:17:34.907054800Z
+    at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+    at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+    at java.base/java.lang.Thread.run(Thread.java:1474)
+
+#34 "report-4" RUNNABLE 2026-10-03T14:17:34.907054800Z
+    at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+    at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+    at java.base/java.lang.Thread.run(Thread.java:1474)
+
+#35 "report-5" RUNNABLE 2026-10-03T14:17:34.909054200Z
+    at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+    at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+    at java.base/java.lang.Thread.run(Thread.java:1474)
+
+#36 "report-6" RUNNABLE 2026-10-03T14:17:34.922053900Z
+    at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+    at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+    at java.base/java.lang.Thread.run(Thread.java:1474)
+
+#37 "report-7" RUNNABLE 2026-10-03T14:17:34.926053400Z
+    at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+    at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+    at java.base/java.lang.Thread.run(Thread.java:1474)
+
+#38 "report-8" RUNNABLE 2026-10-03T14:17:34.926053400Z
+    at hr.javacro.section1.Ex3Fixed.crunch(Ex3Fixed.java:63)
+    at hr.javacro.section1.Ex3Fixed.computeReport(Ex3Fixed.java:57)
+    at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:545)
+    at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:328)
+    at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1090)
+    at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:614)
+    at java.base/java.lang.Thread.run(Thread.java:1474)
+

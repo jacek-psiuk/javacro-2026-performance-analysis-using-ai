@@ -1,0 +1,8 @@
++   9.0s  jcmd.EXE 48408 VM.version
++   9.8s  jcmd.EXE 48408 VM.uptime
++  10.5s  jcmd.EXE 48408 VM.flags
++  11.2s  jcmd.EXE 48408 VM.command_line
++  12.0s  jstack.EXE -l 48408 > thread-ex3-48408-20261011-103435-1.txt
++  12.9s  jcmd.EXE 48408 Thread.dump_to_file -format=json threads-ex3-48408-20261011-103435-1.json
++  17.8s  jstack.EXE -l 48408 > thread-ex3-48408-20261011-103435-2.txt
++  19.0s  jcmd.EXE 48408 Thread.dump_to_file -format=json threads-ex3-48408-20261011-103435-2.json

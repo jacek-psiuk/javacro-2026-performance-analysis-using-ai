@@ -1,0 +1,80 @@
+{
+  "description": "Unbuffered FileOutputStream writes + unclosed GZIPInputStreams (section2 Ex2), existing async-profiler session.",
+  "sources": [
+    {
+      "from": "src/main/java/hr/javacro/section2/Ex2.java",
+      "replace": [
+        [
+          "IO.println(\"Profile with: asprof -e cpu -d 30 -o flat=20 \" + ProcessHandle.current().pid());",
+          "IO.println(\"\");"
+        ],
+        [
+          "IO.println(\"         and: asprof -e nativemem -d 30 -f nativemem.jfr \" + ProcessHandle.current().pid());",
+          "IO.println(\"\");"
+        ]
+      ]
+    }
+  ],
+  "main": "hr.javacro.section2.Ex2",
+  "record": {
+    "copy": [
+      "async-profiler/ex2-all.jfr",
+      "async-profiler/ex2-alloc-bytes-threads.collapsed",
+      "async-profiler/ex2-cpu-threads.collapsed",
+      "async-profiler/ex2-wall-threads.collapsed",
+      "async-profiler/ex2-nativemem-bytes-threads.collapsed",
+      "async-profiler/ex2-nativemem-leak-bytes-threads.collapsed",
+      "async-profiler/ex2-fos-write-5s.collapsed"
+    ]
+  },
+  "prompt": "Our report export/import service (Linux) exports slowly, and we are worried about its process memory. Find out what limits export throughput and whether memory leaks. One async-profiler session (cpu, wall, alloc, nativemem) split into collapsed files, and a 5 s method trace of FileOutputStream.write are in perf-artifacts/.",
+  "expected": {
+    "verdicts": [
+      "REQUIRED"
+    ],
+    "forbidden_titles": "deadlock|contention",
+    "issues": [
+      {
+        "id": "unclosed-gzip-streams",
+        "match": "GZIP|Inflater|zlib|native|unclosed|IMPORT_HISTORY|leak",
+        "severities": [
+          "Critical",
+          "High"
+        ],
+        "lines": {
+          "Ex2.java": [
+            44,
+            49,
+            80,
+            85,
+            86,
+            87
+          ]
+        }
+      },
+      {
+        "id": "unbuffered-writes",
+        "match": "unbuffer|buffer|write|syscall|kernel|FileOutputStream",
+        "severities": [
+          "Critical",
+          "High"
+        ],
+        "lines": {
+          "Ex2.java": [
+            54,
+            57,
+            58,
+            60,
+            69,
+            72,
+            73,
+            74,
+            75,
+            76,
+            77
+          ]
+        }
+      }
+    ]
+  }
+}

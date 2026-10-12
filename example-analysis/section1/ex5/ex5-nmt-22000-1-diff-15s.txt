@@ -1,0 +1,97 @@
+﻿22000:
+
+Native Memory Tracking:
+
+(Omitting categories weighting less than 1KB)
+
+Total: reserved=1880410KB +129619KB, committed=501694KB +129623KB
+
+malloc=178254KB +129619KB #12623 +2218
+
+mmap: reserved=1702156KB, committed=323440KB +4KB
+
+-                 Java Heap (reserved=262144KB, committed=262144KB)
+                            (mmap: reserved=262144KB, committed=262144KB)
+
+-                     Class (reserved=1048661KB, committed=213KB)
+                            (classes #1033 +3)
+                            (  instance classes #878 +3, array classes #155)
+                            (malloc=85KB #1286 +15)
+                            (mmap: reserved=1048576KB, committed=128KB)
+                            (  Metadata)
+                            (    reserved=65536KB, committed=640KB)
+                            (    used=586KB +28KB)
+                            (    waste=54KB =8.49% -28KB)
+                            (  Class space)
+                            (    reserved=1048576KB, committed=128KB)
+                            (    used=41KB +2KB)
+                            (    waste=87KB =68.15% -2KB)
+
+-                    Thread (reserved=23617KB, committed=937KB +4KB)
+                            (threads #23)
+                            (stack: reserved=23552KB, committed=872KB +4KB)
+                            (malloc=40KB #142)
+                            (arena=25KB #42)
+
+-                      Code (reserved=248048KB +18KB, committed=7724KB +18KB)
+                            (malloc=175KB +18KB #2517 +85)
+                            (mmap: reserved=247872KB, committed=7548KB)
+                            (arena=1KB #1)
+
+-                        GC (reserved=54827KB +1KB, committed=54827KB +1KB)
+                            (malloc=16811KB +1KB #1823 +12)
+                            (mmap: reserved=38016KB, committed=38016KB)
+
+-                 GCCardSet (reserved=4KB +2KB, committed=4KB +2KB)
+                            (malloc=4KB +2KB #4)
+
+-                  Compiler (reserved=215KB, committed=215KB)
+                            (malloc=19KB #46)
+                            (arena=196KB #6)
+
+-                  Internal (reserved=1300KB +6KB, committed=1300KB +6KB)
+                            (malloc=1232KB +6KB #1675 +76)
+                            (mmap: reserved=68KB, committed=68KB)
+
+-                     Other (reserved=158144KB +130432KB, committed=158144KB +130432KB)
+                            (malloc=158144KB +130432KB #2471 +2038)
+
+-                    Symbol (reserved=1150KB, committed=1150KB)
+                            (malloc=790KB #349 +4)
+                            (arena=360KB #1)
+
+-    Native Memory Tracking (reserved=243KB +40KB, committed=243KB +40KB)
+                            (malloc=21KB +1KB #355 +23)
+                            (tracking overhead=222KB +39KB)
+
+-        Shared class space (reserved=16384KB, committed=14016KB)
+                            (mmap: reserved=16384KB, committed=14016KB)
+
+-               Arena Chunk (reserved=1KB -880KB, committed=1KB -880KB)
+                            (malloc=1KB -880KB)
+
+-                   Tracing (reserved=6KB, committed=6KB)
+                            (malloc=6KB #32)
+
+-                    Module (reserved=41KB, committed=41KB)
+                            (malloc=41KB #1270)
+
+-                 Safepoint (reserved=8KB, committed=8KB)
+                            (mmap: reserved=8KB, committed=8KB)
+
+-           Synchronization (reserved=37KB, committed=37KB)
+                            (malloc=37KB #552)
+
+-            Serviceability (reserved=30KB, committed=30KB)
+                            (malloc=30KB #18)
+
+-                 Metaspace (reserved=65548KB, committed=652KB)
+                            (malloc=12KB #9)
+                            (mmap: reserved=65536KB, committed=640KB)
+
+-      String Deduplication (reserved=1KB, committed=1KB)
+                            (malloc=1KB #8)
+
+-           Object Monitors (reserved=1KB, committed=1KB)
+                            (malloc=1KB #3)
+

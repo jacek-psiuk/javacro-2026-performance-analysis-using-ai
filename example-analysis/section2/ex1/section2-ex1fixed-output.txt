@@ -1,0 +1,12 @@
+[0.588s][info][jfr,startup] Started recording 1. The result will be written to:
+[0.588s][info][jfr,startup] 
+[0.588s][info][jfr,startup] C:\Users\skallz\gdrive\javacro-2026\jfr-recordings\section2-ex1fixed.jfr
+PID: 22440
+Processing orders with 8 workers. To record: jcmd 22440 JFR.start settings=profile duration=30s filename=ex1fixed.jfr
+Throughput: 35908 orders/s
+Throughput: 44057 orders/s
+Throughput: 37325 orders/s
+Throughput: 43871 orders/s
+Throughput: 44428 orders/s
+Throughput: 42622 orders/s
+Throughput: 44582 orders/s

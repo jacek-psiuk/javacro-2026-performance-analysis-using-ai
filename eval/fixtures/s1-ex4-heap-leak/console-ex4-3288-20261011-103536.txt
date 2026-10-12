@@ -1,0 +1,9 @@
+PID: 3288
+Serving reports, PID 3288
+  2s: requests=2000, cache entries=2000, heap used=22 MB
+  4s: requests=4000, cache entries=4000, heap used=43 MB
+  6s: requests=6000, cache entries=6000, heap used=61 MB
+  8s: requests=8000, cache entries=8000, heap used=82 MB
+ 10s: requests=10000, cache entries=10000, heap used=102 MB
+ 12s: requests=12000, cache entries=12000, heap used=123 MB
+ 14s: requests=14000, cache entries=14000, heap used=141 MB

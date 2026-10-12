@@ -1,0 +1,12 @@
++   3.2s  jcmd.EXE 11240 VM.version
++   3.4s  jcmd.EXE 11240 VM.uptime
++   3.6s  jcmd.EXE 11240 VM.flags
++   3.8s  jcmd.EXE 11240 VM.command_line
++   4.0s  jcmd.EXE 11240 VM.native_memory baseline
++   4.2s  jcmd.EXE 11240 VM.native_memory summary > nmt-ex5-11240-20261011-103552-0-summary.txt
++   4.5s  OS memory of 11240
++  15.7s  jcmd.EXE 11240 VM.native_memory summary.diff > nmt-ex5-11240-20261011-103552-1-diff.txt
++  16.0s  OS memory of 11240
++  26.3s  jcmd.EXE 11240 VM.native_memory summary.diff > nmt-ex5-11240-20261011-103552-2-diff.txt
++  26.5s  OS memory of 11240
++  27.0s  jcmd.EXE 11240 GC.heap_dump heap-ex5-11240-20261011-103552.hprof

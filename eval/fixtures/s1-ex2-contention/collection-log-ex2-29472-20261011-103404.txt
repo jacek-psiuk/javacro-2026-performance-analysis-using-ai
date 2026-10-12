@@ -1,0 +1,7 @@
++   4.3s  jcmd.EXE 29472 VM.version
++   4.4s  jcmd.EXE 29472 VM.uptime
++   4.7s  jcmd.EXE 29472 VM.flags
++   4.9s  jcmd.EXE 29472 VM.command_line
++   5.2s  jstack.EXE -l 29472 > thread-ex2-29472-20261011-103404-1.txt
++   9.5s  jstack.EXE -l 29472 > thread-ex2-29472-20261011-103404-2.txt
++  13.7s  jstack.EXE -l 29472 > thread-ex2-29472-20261011-103404-3.txt

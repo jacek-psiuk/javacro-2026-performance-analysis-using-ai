@@ -1,0 +1,16 @@
+PID: 11240
+Sending messages.
+
+
+  2s: messages sent=2000, pending=27, retransmitted=77, given up=0, heap used=90 MB, direct buffers=31 (1 MB)
+  4s: messages sent=4000, pending=29, retransmitted=165, given up=0, heap used=110 MB, direct buffers=31 (1 MB)
+  6s: messages sent=6000, pending=24, retransmitted=271, given up=0, heap used=92 MB, direct buffers=35 (2 MB)
+  8s: messages sent=8000, pending=28, retransmitted=367, given up=0, heap used=74 MB, direct buffers=35 (2 MB)
+ 11s: messages sent=10000, pending=30, retransmitted=485, given up=0, heap used=55 MB, direct buffers=35 (2 MB)
+ 13s: messages sent=12000, pending=31, retransmitted=600, given up=0, heap used=37 MB, direct buffers=36 (2 MB)
+ 15s: messages sent=14000, pending=20, retransmitted=711, given up=0, heap used=19 MB, direct buffers=36 (2 MB)
+ 17s: messages sent=16000, pending=28, retransmitted=815, given up=0, heap used=152 MB, direct buffers=36 (2 MB)
+ 20s: messages sent=18000, pending=27, retransmitted=941, given up=0, heap used=134 MB, direct buffers=41 (2 MB)
+ 22s: messages sent=20000, pending=15, retransmitted=1063, given up=0, heap used=116 MB, direct buffers=46 (2 MB)
+ 24s: messages sent=22000, pending=29, retransmitted=1166, given up=0, heap used=98 MB, direct buffers=46 (2 MB)
+ 26s: messages sent=24000, pending=18, retransmitted=1272, given up=0, heap used=79 MB, direct buffers=46 (2 MB)

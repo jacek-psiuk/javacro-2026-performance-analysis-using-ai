@@ -1,0 +1,87 @@
+{
+  "description": "CPU-bound virtual threads occupy all carriers, heartbeat starves (section1 Ex3). jstack + JSON thread dumps.",
+  "sources": [
+    {
+      "from": "src/main/java/hr/javacro/section1/Ex3.java",
+      "replace": [
+        [
+          "CPU-bound virtual threads. Heartbeat stops, so take thread dumps with:",
+          "report threads."
+        ],
+        [
+          "IO.println(\"  jstack \" + ProcessHandle.current().pid());",
+          "IO.println(\"\");"
+        ],
+        [
+          "IO.println(\"  jcmd \" + ProcessHandle.current().pid() + \" Thread.dump_to_file -format=json ex3.json\");",
+          "IO.println(\"\");"
+        ]
+      ]
+    }
+  ],
+  "main": "hr.javacro.section1.Ex3",
+  "record": {
+    "steps": [
+      [
+        "sleep",
+        6
+      ],
+      [
+        "context"
+      ],
+      [
+        "jstack",
+        1
+      ],
+      [
+        "threads_json",
+        1
+      ],
+      [
+        "sleep",
+        4
+      ],
+      [
+        "jstack",
+        2
+      ],
+      [
+        "threads_json",
+        2
+      ]
+    ]
+  },
+  "prompt": "Our service runs CPU-heavy report jobs next to a periodic heartbeat. We suspect the heartbeat stalls while the reports run. Check whether the service is healthy, and what is wrong if it is not.",
+  "expected": {
+    "verdicts": [
+      "REQUIRED"
+    ],
+    "forbidden_titles": "deadlock|leak",
+    "issues": [
+      {
+        "id": "carrier-starvation",
+        "match": "carrier|virtual|starv|ForkJoinPool|heartbeat",
+        "severities": [
+          "Critical",
+          "High"
+        ],
+        "lines": {
+          "Ex3.java": [
+            40,
+            41,
+            42,
+            57,
+            58,
+            59,
+            61,
+            62,
+            66,
+            67,
+            68
+          ]
+        },
+        "rank": 1
+      }
+    ]
+  }
+}

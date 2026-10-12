@@ -1,0 +1,44 @@
+{
+  "description": "Healthy twin of s2-ex1-jfr (Ex1Fixed renamed to Ex1), recorded with the same JFR settings.",
+  "sources": [
+    {
+      "from": "src/main/java/hr/javacro/section2/Ex1Fixed.java",
+      "to": "src/main/java/hr/javacro/section2/Ex1.java",
+      "replace": [
+        [
+          "Ex1Fixed",
+          "Ex1"
+        ],
+        [
+          "\"Processing orders with 8 workers. To record: jcmd \" + ProcessHandle.current().pid()\n                + \" JFR.start settings=profile duration=30s filename=ex1fixed.jfr\"",
+          "\"Processing orders with 8 workers, PID \" + ProcessHandle.current().pid()"
+        ]
+      ]
+    }
+  ],
+  "main": "hr.javacro.section2.Ex1",
+  "record": {
+    "steps": [
+      [
+        "sleep",
+        5
+      ],
+      [
+        "context"
+      ],
+      [
+        "jfr",
+        15
+      ]
+    ]
+  },
+  "prompt": "Our order-processing service (8 worker threads) is slower than we expect. Find out where the time goes. A 15 s JFR recording (settings=profile) taken under normal load is in perf-artifacts/.",
+  "expected": {
+    "verdicts": [
+      "NONE",
+      "RECOMMENDED"
+    ],
+    "forbidden_titles": "contention|regex|Pattern|NumberFormat|exception|deadlock|leak",
+    "issues": []
+  }
+}

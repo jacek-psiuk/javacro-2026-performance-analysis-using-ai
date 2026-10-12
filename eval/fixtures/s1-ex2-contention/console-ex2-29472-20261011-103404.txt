@@ -1,0 +1,8 @@
+PID: 29472
+Workers started. PID 29472
+Throughput: 4 requests/s
+Throughput: 2 requests/s
+Throughput: 4 requests/s
+Throughput: 4 requests/s
+Throughput: 4 requests/s
+Throughput: 2 requests/s
